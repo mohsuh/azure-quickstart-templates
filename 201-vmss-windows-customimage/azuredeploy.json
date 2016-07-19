@@ -123,8 +123,7 @@
     "frontEndIPConfigID": "[concat(variables('lbID'),'/frontendIPConfigurations/loadBalancerFrontEnd')]",
     "natStartPort": 50000,
     "natEndPort": 50119,
-    "natBackendPort": 3389,
-    "natPoolName": "[concat(variables('lbID'), 'natpool')]"
+    "natBackendPort": 3389
   },
   "resources": [
     {
