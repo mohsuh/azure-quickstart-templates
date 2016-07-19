@@ -183,38 +183,6 @@
             "name": "[variables('lbBEAddressPool')]"
           }
         ],
-        "loadBalancingRules": [
-          {
-            "name": "weblb",
-            "properties": {
-              "frontendIPConfiguration": {
-                "id": "[variables('lbFEIPConfigID')]"
-              },
-              "backendAddressPool": {
-                "id": "[variables('lbBEAddressPoolID')]"
-              },
-              "probe": {
-                "id": "[variables('lbWebProbeID')]"
-              },
-              "protocol": "tcp",
-              "frontendPort": "[parameters('frontEndLBPort')]",
-              "backendPort": "[parameters('backEndLBPort')]",
-              "enableFloatingIP": false
-            }
-          }
-        ],
-        "probes": [
-          {
-            "name": "[variables('lbWebProbeName')]",
-            "properties": {
-              "protocol": "http",
-              "port": "[parameters('backEndLBPort')]",
-              "intervalInSeconds": "[parameters('probeIntervalInSeconds')]",
-              "numberOfProbes": "[parameters('numberOfProbes')]",
-              "requestPath": "[parameters('probeRequestPath')]"
-            }
-          }
-        ],
         "inboundNatPools": [
           {
             "name": "[variables('natPoolName')]",
