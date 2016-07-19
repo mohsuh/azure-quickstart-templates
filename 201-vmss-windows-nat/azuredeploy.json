@@ -91,7 +91,7 @@
     "storageApiVersion": "2015-06-15"
   },
   "resources": [
-    {
+  {
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[variables('virtualNetworkName')]",
       "location": "[resourceGroup().location]",
@@ -111,7 +111,7 @@
           }
         ]
       }
-    },
+},
     {
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[concat(variables('uniqueStringArray')[copyIndex()], variables('newStorageAccountSuffix'))]",
@@ -136,8 +136,8 @@
           "domainNameLabel": "[variables('longNamingInfix')]"
         }
       }
-    },
-    {
+  },
+{
       "type": "Microsoft.Network/loadBalancers",
       "name": "[variables('loadBalancerName')]",
       "location": "[resourceGroup().location]",
@@ -176,7 +176,7 @@
           }
         ]
       }
-    },
+},
     {
       "type": "Microsoft.Compute/virtualMachineScaleSets",
       "name": "[variables('namingInfix')]",
